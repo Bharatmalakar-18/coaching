@@ -1,0 +1,37 @@
+body{
+    background-color: antiquewhite;
+    text-align: center;
+   
+}
+.quiz-container{
+    background-color: rgb(163, 144, 144);
+    width: 350px;
+    padding: 30px;
+    border-radius: 9px;
+    margin: 50px auto;
+    
+}
+.option{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.btn{
+    font-size: 15px;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.btn:hover{
+    background-color: rgb(63, 177, 63);
+    
+    color: white;
+}
+#next-btn{
+margin-top: 15px;
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+}

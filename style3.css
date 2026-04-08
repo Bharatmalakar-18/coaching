@@ -1,0 +1,244 @@
+/* =========================================
+   Google Fonts Import
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+/* =========================================
+   CSS Variables for Colors & Styling
+   ========================================= */
+:root {
+    --primary-color: #4F46E5; /* Indigo Blue */
+    --secondary-color: #818CF8; /* Light Blue */
+    --accent-color: #FF7E67; /* Soft Orange/Coral */
+    --bg-color: #F8FAFC; /* Light Grayish Blue */
+    --text-dark: #1E293B;
+    --text-light: #64748B;
+    --white: #FFFFFF;
+    --whatsapp: #25D366;
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================================
+   Global Reset
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent; /* Removes mobile click highlight */
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* =========================================
+   Header & Navigation
+   ========================================= */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 30px 20px 40px;
+    box-shadow: 0 4px 20px rgba(79, 70, 229, 0.3);
+    color: var(--white);
+    text-align: center;
+}
+
+.heading .icons {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.heading h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.heading p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* =========================================
+   Main Section
+   ========================================= */
+main {
+    flex: 1;
+    padding: 20px;
+    max-width: 600px; /* Ensures it looks good on tablets too */
+    margin: -30px auto 0; /* Pulls content up slightly over header */
+    width: 100%;
+}
+
+/* --- Attract Section (Hero) --- */
+.attract {
+    background: var(--white);
+    padding: 25px 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 10;
+}
+
+.attract h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.show {
+    background: var(--accent-color);
+    color: var(--white);
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 126, 103, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 20px;
+}
+
+.show:active {
+    transform: scale(0.95);
+    box-shadow: none;
+}
+
+.attract .img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+/* --- Material Section (Notes & Test Cards) --- */
+.material {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.notes, .test {
+    background: var(--white);
+    padding: 20px 15px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.notes:active, .test:active {
+    transform: translateY(3px);
+}
+
+.material i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    background: #EEF2FF;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-bottom: 12px;
+}
+
+.test i {
+    color: var(--accent-color);
+    background: #FFF1F0;
+}
+
+.material button {
+    background: transparent;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.material p {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+/* =========================================
+   Footer
+   ========================================= */
+.footer {
+    background: var(--white);
+    padding: 20px;
+    text-align: center;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.03);
+    margin-top: auto;
+}
+
+.footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: var(--whatsapp);
+    color: var(--white);
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    max-width: 300px;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    transition: background 0.3s;
+}
+
+.footer a i {
+    font-size: 1.4rem;
+}
+
+.footer p {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* =========================================
+   Animations
+   ========================================= */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Hiding extra whatsapp icon since it's now inside the button */
+.footer > i.fa-whatsapp {
+    display: none;
+}
