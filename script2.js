@@ -2,7 +2,7 @@
 let chapters = [
     {
         name: "Relations and Functions",
-        link: "ch.pdf"
+        link: "https://drive.google.com/file/d/1ur_RvcvkQM5TkLFxEFnmWhUrksd1Tgdw/preview?usp=sharing"
     },
     {
         name: "Matrices",
