@@ -1,31 +1,50 @@
 // ================== CHAPTER DATA ==================
 let chapters = [
     {
-        name: "Relations and Functions",
-        link: "https://drive.google.com/file/d/1ur_RvcvkQM5TkLFxEFnmWhUrksd1Tgdw/preview?usp=sharing"
+        name: "comming soon ! Quality takes a little time ",
+        link: ""
     },
+    // {
+    //     name: "Ma",
+    //     link: "notes2.pdf"
+    // },
+    // {
+    //     name: "",
+    //     link: "notes3.pdf"
+    // },
+    // {
+    //     name: "",
+    //     link: "notes4.pdf"
+    // }
+];
+let pchapters = [
     {
-        name: "Matrices",
-        link: "notes2.pdf"
+        name: "Ruk ja yar itna kya jldi hai",
+        link: ""
     },
-    {
-        name: "Determinants",
-        link: "notes3.pdf"
-    },
-    {
-        name: "Continuity and Differentiability",
-        link: "notes4.pdf"
-    }
+    // {
+    //     name: "Matrices",
+    //     link: "notes2.pdf"
+    // },
+    // {
+    //     name: "Determinants",
+    //     link: "notes3.pdf"
+    // },
+    // {
+    //     name: "Continuity and Differentiability",
+    //     link: "notes4.pdf"
+    // }
 ];
 
 
 // ================== SELECT ELEMENTS ==================
 let notesBtn = document.querySelector(".notes");
 let notesSection = document.querySelector(".notes-section");
-
+let test=document.querySelector(".test");
 
 // ================== EVENT LISTENER ==================
 notesBtn.addEventListener("click", showNotes);
+test.addEventListener("click",pshowNotes)
 
 
 // ================== SHOW NOTES FUNCTION ==================
@@ -36,6 +55,32 @@ function showNotes() {
 
     // Loop through chapters
     chapters.forEach((chapter) => {
+
+        let div = document.createElement("div");
+        div.classList.add("chapter-card");
+
+        div.innerHTML = `
+            <h3>${chapter.name}</h3>
+            <button class="view-btn">View</button>
+        `;
+
+        // Button click event (important 🔥)
+        let btn = div.querySelector(".view-btn");
+        btn.addEventListener("click", () => {
+            openNote(chapter.link);
+        });
+
+        notesSection.appendChild(div);
+    });
+}
+
+function pshowNotes() {
+
+    // Clear previous content
+    notesSection.innerHTML = "";
+
+    // Loop through chapters
+    pchapters.forEach((chapter) => {
 
         let div = document.createElement("div");
         div.classList.add("chapter-card");
